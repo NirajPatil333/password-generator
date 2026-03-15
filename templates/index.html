@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">  -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+<body>
+    <div class="container">
+        <h1>Password Generator</h1>
+
+        <form  class="effects"  method="post" >
+            <input type="number" name="length" placeholder="Enter the length" required>
+
+        <br><br>
+
+        <button type="submit">Generate Password</button>
+        </form>
+
+        {% if password %}
+           <div class="result">
+               <span id="generatepassword">Generated Password: {{ password }}</span>
+               <button name="button" class="copy-btn" onclick="copyPassword()">copy</button>
+            </div>
+        {% endif %}
+    </div>
+      <script>
+        function copyPassword(){
+            const text =document.getElementById("generatepassword").innerText;
+            navigator.clipboard.writeText(text);
+            alert("Password Copied!");
+        }
+      </script>
+</body>
+</html>
