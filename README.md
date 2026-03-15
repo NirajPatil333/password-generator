@@ -19,7 +19,7 @@ A responsive password generator web app built using **Python Flask, HTML, and CS
 ## Project Link
 
 GitHub Repository:
-https://github.com/NirajPatil333/password-generator
+[https://github.com/NirajPatil333/password-generator](https://password-generator-1-gwv6.onrender.com/)
 
 ## Author
 
